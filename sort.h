@@ -23,7 +23,6 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
-void recursive_sort(int *array, int low, int high, size_t size);
 int lomuto_partition(int *array, int low, int high, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
@@ -35,4 +34,5 @@ void bitonic_sort(int *array, size_t size);
 void swapp(listint_t *current, listint_t *curr_old, listint_t **list);
 void quick_sort_hoare(int *array, size_t size);
 int array_max(int *array, size_t size);
+void recursive_sort(int *array, size_t size, int low, int high);
 #endif
