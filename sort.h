@@ -34,4 +34,5 @@ void radix_sort(int *array, size_t size);
 void bitonic_sort(int *array, size_t size);
 void swapp(listint_t *current, listint_t *curr_old, listint_t **list);
 void quick_sort_hoare(int *array, size_t size);
+int array_max(int *array, size_t size);
 #endif
