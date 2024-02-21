@@ -29,18 +29,15 @@ void swapp(listint_t *current, listint_t *curr_old, listint_t **list)
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *curr = *list, *start = NULL, *end = NULL;
-	int swapped;
 
 	if (!list || !*list || !(*list)->next)
 		return;
 	do {
-		swapped = 0;
 		while (curr->next)
 		{
 			if (curr->n > curr->next->n)
 			{
 				swapp(curr->next, curr, list);
-				swapped = 1;
 			}
 			else
 				curr = curr->next;
@@ -51,11 +48,10 @@ void cocktail_sort_list(listint_t **list)
 			if (curr->n < curr->prev->n)
 			{
 				swapp(curr, curr->prev, list);
-				swapped = 1;
 			}
 			else
 				curr = curr->prev;
 		}
 		start = curr;
-	} while (swapped && start != end);
+	} while (start != end);
 }
